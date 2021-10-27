@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prettier": "npx prettier --write ."
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -16,6 +17,7 @@
     "eslint-config-react-minimal": "^2.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-react": "^7.26.1",
+    "prettier": "2.4.1",
     "vite": "^2.6.4"
   }
 }
