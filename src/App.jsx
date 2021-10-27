@@ -1,4 +1,3 @@
-import { useState } from "react";
 import React from "react";
 import Header from "./components/Header";
 import SearchUser from "./components/SearchUser";
@@ -10,7 +9,7 @@ function App() {
   const [username, setUserName] = React.useState(null);
   const [startGame, setStartGame] = React.useState(false);
   const [data, setData] = React.useState(null);
-  const [profileData, setProfileData] = React.useState("");
+  const [profileData, setProfileData] = React.useState(null);
 
   return (
     <main>
@@ -25,7 +24,8 @@ function App() {
         name={username}
         profileData={profileData}
         setProfileData={setProfileData}
-        gameStart={startGame}
+        startGame={startGame}
+        setStartGame={setStartGame}
       />
     </main>
   );
