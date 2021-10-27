@@ -18,15 +18,15 @@ hangman - but this time the person you're trying to save is *yourself!*
 
 ## Get started
 
-Install the dependencies...
+Clone the repo
 
-clone the repo
+Install the dependencies
 
 ```bash
 npm install
 ```
 
-...then start the server
+Then start the server
 
 ```bash
 npm run dev
