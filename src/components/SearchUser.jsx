@@ -1,22 +1,20 @@
 import React from "react";
 const USER_URL = "https://api.github.com/users/";
 
-const SearchUser = () => {
-  const [username, setUserName] = React.useState("");
-
+const SearchUser = (props) => {
   React.useEffect(() => {
-    console.log(username);
-    fetch(USER_URL + username)
+    console.log(props.username);
+    fetch(USER_URL + props.username)
       .then((res) => res.json())
-      .then((data) => setProfileData(data));
-  }, [username]);
+      .then((data) => props.setProfileData(data));
+  }, [props.username]);
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        setStartGame(true);
-        setUserName(event.target.username.value);
+        props.setStartGame(true);
+        props.setUserName(event.target.username.value);
       }}
     >
       <label>
