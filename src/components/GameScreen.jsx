@@ -1,15 +1,15 @@
 import React from "react";
-import Profile from "./Profile";
+import GameComponents from "./GameComponents";
 
-const GameScreen = (props) => {
+const GameScreen = ({ name, profileData, setProfileData, startGame }) => {
   return (
     <>
-      {props.startGame ? (
-        <Profile
-          name={props.name}
-          profileData={props.profileData}
-          setProfileData={props.setProfileData}
-          startGame={props.startGame}
+      {startGame ? (
+        <GameComponents
+          name={name}
+          profileData={profileData}
+          setProfileData={setProfileData}
+          startGame={startGame}
         />
       ) : null}
     </>
