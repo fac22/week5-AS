@@ -18,7 +18,13 @@ const checkWin = (correct, wrong, word) => {
   return status;
 };
 
-const Popup = ({ correctLetters, wrongLetters, randomWord, setPlayable }) => {
+const Popup = ({
+  correctLetters,
+  wrongLetters,
+  randomWord,
+  setPlayable,
+  playAgain,
+}) => {
   let finalMessage = "";
   let finalMessageRevealWord = "";
   let playable = true;
@@ -43,7 +49,7 @@ const Popup = ({ correctLetters, wrongLetters, randomWord, setPlayable }) => {
       <div className="popup">
         <h2>{finalMessage}</h2>
         <h3>{finalMessageRevealWord}</h3>
-        <button>Play Again</button>
+        <button onClick={playAgain}>Play Again</button>
       </div>
     </div>
   );

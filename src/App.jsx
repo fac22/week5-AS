@@ -60,6 +60,17 @@ function App() {
     return () => window.removeEventListener("keydown", keydown);
   }, [correctLetters, wrongLetters, playable]);
 
+  const playAgain = () => {
+    setPlayable(true);
+
+    //Empty arrays
+    setCorrectLetters([]);
+    setWrongLetters([]);
+
+    const random = Math.floor(Math.random() * words.length);
+    randomWord = words[random];
+  };
+
   return (
     <main>
       <Header />
@@ -68,6 +79,7 @@ function App() {
         setUserName={setUserName}
         setProfileData={setProfileData}
         setStartGame={setStartGame}
+        playAgain={playAgain}
       />
       <GameScreen
         name={username}
@@ -80,6 +92,7 @@ function App() {
         randomWord={randomWord}
         renderNotification={renderNotification}
         setPlayable={setPlayable}
+        playAgain={playAgain}
       />
     </main>
   );

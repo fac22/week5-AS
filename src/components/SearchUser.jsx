@@ -1,12 +1,13 @@
 import React from "react";
 
-const SearchUser = ({ setUserName, setStartGame }) => {
+const SearchUser = ({ setUserName, setStartGame, playAgain }) => {
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
         setStartGame(true);
         setUserName(event.target.username.value);
+        playAgain();
       }}
     >
       <label>

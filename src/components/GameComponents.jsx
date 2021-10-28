@@ -17,6 +17,7 @@ function GameComponents({
   randomWord,
   renderNotification,
   setPlayable,
+  playAgain,
 }) {
   if (!name) return <div>Loading...</div>;
   return (
@@ -38,6 +39,7 @@ function GameComponents({
         wrongLetters={wrongLetters}
         randomWord={randomWord}
         setPlayable={setPlayable}
+        playAgain={playAgain}
       />
       <Notification renderNotification={renderNotification} />
     </div>
