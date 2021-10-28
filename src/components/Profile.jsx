@@ -27,7 +27,3 @@ function Profile(props) {
 }
 
 export default Profile;
-
-// if (data.name) {
-//     document.circle.style.display = inline
-// }
