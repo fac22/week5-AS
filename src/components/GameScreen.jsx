@@ -1,7 +1,15 @@
 import React from "react";
 import GameComponents from "./GameComponents";
 
-const GameScreen = ({ name, profileData, setProfileData, startGame }) => {
+const GameScreen = ({
+  name,
+  profileData,
+  setProfileData,
+  startGame,
+  correctLetters,
+  wrongLetters,
+  randomWord,
+}) => {
   return (
     <>
       {startGame ? (
@@ -10,6 +18,9 @@ const GameScreen = ({ name, profileData, setProfileData, startGame }) => {
           profileData={profileData}
           setProfileData={setProfileData}
           startGame={startGame}
+          correctLetters={correctLetters}
+          wrongLetters={wrongLetters}
+          randomWord={randomWord}
         />
       ) : null}
     </>

@@ -1,9 +1,18 @@
 import React from "react";
 
-const WrongLetters = () => {
+const WrongLetters = ({ wrongLetters }) => {
   return (
     <div className="wrong-letters-container">
-      <div id="wrong-letters"></div>
+      <div>
+        {wrongLetters.length > 0 && <p>Ops: Wrong</p>}
+        {wrongLetters
+          .map((letter, index) => <span key={index}>{letter}</span>)
+          //reduce is going to add a comma in between every span
+          .reduce(
+            (prev, cur) => (prev === null ? [cur] : [prev, ", ", cur]),
+            null
+          )}
+      </div>
     </div>
   );
 };

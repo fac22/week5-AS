@@ -5,7 +5,15 @@ import WrongLetters from "./WrongLetters";
 import Word from "./Word";
 import Fetch from "./Fetch";
 
-function GameComponents({ name, profileData, setProfileData, startGame }) {
+function GameComponents({
+  name,
+  profileData,
+  setProfileData,
+  startGame,
+  correctLetters,
+  wrongLetters,
+  randomWord,
+}) {
   if (!name) return <div>Loading...</div>;
   return (
     <>
@@ -18,8 +26,8 @@ function GameComponents({ name, profileData, setProfileData, startGame }) {
       <div>
         <div className="game-container">
           <BodyShape avatar={profileData.avatar_url} />
-          <WrongLetters />
-          <Word />
+          <WrongLetters wrongLetters={wrongLetters} />
+          <Word randomWord={randomWord} correctLetters={correctLetters} />
         </div>
       </div>
     </>
