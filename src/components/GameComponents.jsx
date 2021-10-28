@@ -23,9 +23,9 @@ function GameComponents({
         startGame={startGame}
         profileData={profileData}
       />
+      <BodyShape profileData={profileData} />
       <div>
         <div className="game-container">
-          <BodyShape profileData={profileData} />
           <WrongLetters wrongLetters={wrongLetters} />
           <Word randomWord={randomWord} correctLetters={correctLetters} />
         </div>

@@ -10,7 +10,7 @@ const BodyShape = ({ profileData }) => {
       <line x1="20" y1="230" x2="100" y2="230" />
 
       {/* <!-- Head --> */}
-      <circle cx="140" cy="70" r="20" />
+      <circle cx="140" cy="70" r="20" class="figure-part" />
       <img
         className="img-circle"
         src={profileData.avatar_url}
@@ -20,13 +20,13 @@ const BodyShape = ({ profileData }) => {
         width="50pt"
       />
       {/* <!-- Body --> */}
-      <line x1="140" y1="90" x2="140" y2="150" />
+      <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
       {/* <!-- Arms --> */}
-      <line x1="140" y1="120" x2="120" y2="100" />
-      <line x1="140" y1="120" x2="160" y2="100" />
+      <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+      <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
       {/* <!-- Legs --> */}
-      <line x1="140" y1="150" x2="120" y2="180" />
-      <line x1="140" y1="150" x2="160" y2="180" />
+      <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+      <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
     </svg>
   );
 };
