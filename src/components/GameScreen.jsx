@@ -11,6 +11,7 @@ const GameScreen = ({
   randomWord,
   renderNotification,
   setPlayable,
+  playAgain,
 }) => {
   return (
     <>
@@ -25,6 +26,7 @@ const GameScreen = ({
           randomWord={randomWord}
           renderNotification={renderNotification}
           setPlayable={setPlayable}
+          playAgain={playAgain}
         />
       ) : null}
     </>
