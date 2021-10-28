@@ -19,26 +19,25 @@ function GameComponents({
 }) {
   if (!name) return <div>Loading...</div>;
   return (
-    <>
+    <div className="testwrap">
       <Fetch
         name={name}
         setProfileData={setProfileData}
         startGame={startGame}
         profileData={profileData}
       />
-
-      <div className="game-container">
-        <BodyShape
+      <BodyShape
           avatar={profileData.avatar_url}
           wrongLetters={wrongLetters}
         />
-        <WrongLetters wrongLetters={wrongLetters} />
-        <Word randomWord={randomWord} correctLetters={correctLetters} />
-      </div>
-
+      
+        <div className="game-container">
+          <WrongLetters wrongLetters={wrongLetters} />
+          <Word randomWord={randomWord} correctLetters={correctLetters} />
+        </div>
       <Popup />
       <Notification renderNotification={renderNotification} />
-    </>
+    </div>
   );
 }
 

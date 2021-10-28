@@ -1,11 +1,11 @@
 import React from "react";
 
 const BodyShape = ({ wrongLetters, avatar }) => {
-  //hoe many wrong letters do we have
+  //how many wrong letters do we have
   const errors = wrongLetters.length;
   return (
     <svg height="250" width="200" className="figure-container">
-      <img height="250" width="250" src={avatar} />
+
       {/* <!-- Rod --> */}
       <line x1="60" y1="20" x2="140" y2="20" />
       <line x1="140" y1="20" x2="140" y2="50" />
