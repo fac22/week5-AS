@@ -18,8 +18,17 @@ function App() {
   const [playable, setPlayable] = React.useState(true);
   const [correctLetters, setCorrectLetters] = React.useState([]);
   const [wrongLetters, setWrongLetters] = React.useState([]);
+  const [renderNotification, setRenderNotification] = React.useState(false);
 
   React.useEffect(() => {
+    //helper for notification
+    const showNotification = (setter) => {
+      setter(true);
+      setTimeout(() => {
+        setter(false);
+      }, 2000);
+    };
+
     const keydown = (event) => {
       const { key, keyCode } = event;
       // checking to see if our selectedword includes our letter
@@ -28,19 +37,19 @@ function App() {
 
         //if it doesnt include our letter then we're going to add it to our letters
         //if our correct letters does include our letter already that means we've entered twice
-        // we ant to show notification that we're already ntered that letter
+        // we want to show notification that we're already ntered that letter
         //same think with wrongletters
         if (randomWord.includes(letter)) {
           if (!correctLetters.includes(letter)) {
             setCorrectLetters((currentLetters) => [...currentLetters, letter]);
           } else {
-            // notification
+            showNotification(setRenderNotification);
           }
         } else {
           if (!wrongLetters.includes(letter)) {
             setWrongLetters((wrongLetters) => [...wrongLetters, letter]);
           } else {
-            // notification
+            showNotification(setRenderNotification);
           }
         }
       }
@@ -69,6 +78,7 @@ function App() {
         correctLetters={correctLetters}
         wrongLetters={wrongLetters}
         randomWord={randomWord}
+        renderNotification={renderNotification}
       />
     </main>
   );
