@@ -43,6 +43,7 @@ const words = [
 ];
 // selecting a random word
 let randomWord = words[Math.floor(Math.random() * words.length)];
+let randomNumber = Math.floor(Math.random() * 457);
 
 function App() {
   //state
@@ -124,6 +125,7 @@ function App() {
         correctLetters={correctLetters}
         wrongLetters={wrongLetters}
         randomWord={randomWord}
+        randomNumber={randomNumber}
         renderNotification={renderNotification}
         setPlayable={setPlayable}
         playAgain={playAgain}

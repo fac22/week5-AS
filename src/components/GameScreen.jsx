@@ -9,6 +9,7 @@ const GameScreen = ({
   correctLetters,
   wrongLetters,
   randomWord,
+  randomNumber,
   renderNotification,
   setPlayable,
   playAgain,
@@ -24,6 +25,7 @@ const GameScreen = ({
           correctLetters={correctLetters}
           wrongLetters={wrongLetters}
           randomWord={randomWord}
+          randomNumber={randomNumber}
           renderNotification={renderNotification}
           setPlayable={setPlayable}
           playAgain={playAgain}

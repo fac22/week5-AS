@@ -15,6 +15,7 @@ function GameComponents({
   correctLetters,
   wrongLetters,
   randomWord,
+  randomNumber,
   renderNotification,
   setPlayable,
   playAgain,
@@ -28,6 +29,7 @@ function GameComponents({
         setProfileData={setProfileData}
         startGame={startGame}
         profileData={profileData}
+        randomNumber={randomNumber}
       />
       <BodyShape avatar={profileData.avatar_url} wrongLetters={wrongLetters} />
 
