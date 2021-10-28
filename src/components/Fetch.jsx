@@ -12,8 +12,8 @@ function Fetch({ name, setProfileData, profileData, startGame }) {
   }, [startGame, name]);
 
   return (
-    <div>
-      <h1>Hello {profileData.name}</h1>
+    <div className="player-container">
+      <h2>Hello Player {Math.floor(Math.random() * 457)} </h2>
       <img height="125" width="125" src={profileData.avatar_url} alt={name} />
     </div>
   );

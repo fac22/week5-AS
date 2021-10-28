@@ -19,7 +19,7 @@ const SearchUser = ({ setUserName, setStartGame }) => {
           id="username"
         ></input>
       </label>
-      <button type="submit">START</button>
+      <button type="submit">Play</button>
     </form>
   );
 };
