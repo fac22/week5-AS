@@ -6,16 +6,54 @@
   --deepbluegreen: #037a76;
 }
 
+header {
+  background-color: var(--boldpink);
+  font-family: GameOfSquids;
+}
+h1 {
+  text-align: center;
+  padding: 60pt;
+}
+
 body {
-  background-color: var(--lightbluegreen);
+  background: repeating-linear-gradient(
+    90deg,
+    #222,
+    #222 15px,
+    #333 16px,
+    #333 10px
+  );
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--white);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
+form {
+  background-color: var(--pastelpink);
+  text-align: left;
+  padding: 5pt;
+  font-size: 1.2rem;
+}
+input {
+  margin-left: 5pt;
+}
+.testwrap {
+  display: flex;
+  flex-direction: row;
+}
+.player-container {
+  background-color: var(--deepbluegreen);
+  width: 150px;
+}
 .game-container {
+  background-color: var(--deepbluegreen);
 }
 .figure-container {
+  background-color: var(--white);
   stroke: var(--boldpink);
   stroke-linecap: butt;
   stroke-width: 3px;
@@ -32,13 +70,19 @@ body {
 /* squid game symbols */
 
 .wrapper {
+  background-color: var(--white);
   text-align: center;
+  width: 100vw;
 }
 
 .wrapper > div {
   display: inline-block;
 
   margin: 20px;
+}
+
+div {
+  transition: all 0.2s ease-in-out;
 }
 
 #circle {
@@ -94,7 +138,11 @@ body {
 }
 
 #square:hover,
-#triangle:hover,
 #circle:hover {
-  box-shadow: 0px 20px 40px var(--pastelpink);
+  transform: scale(1.1);
+  box-shadow: 0px 20px 40px var(--deepbluegreen);
+}
+#triangle:hover:after {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
 }
