@@ -16,7 +16,7 @@ function GameComponents({
 }) {
   if (!name) return <div>Loading...</div>;
   return (
-    <>
+    <div className="testwrap">
       <Fetch
         name={name}
         setProfileData={setProfileData}
@@ -25,12 +25,12 @@ function GameComponents({
       />
       <div>
         <div className="game-container">
-          <BodyShape avatar={profileData.avatar_url} />
+          <BodyShape profileData={profileData} />
           <WrongLetters wrongLetters={wrongLetters} />
           <Word randomWord={randomWord} correctLetters={correctLetters} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

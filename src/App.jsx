@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import SearchUser from "./components/SearchUser";
 import GameScreen from "./components/GameScreen";
-
+import gameOfSquids from "./fonts/GameOfSquids-1GMVL.woff";
 import "./App.css";
 
 // preselected words

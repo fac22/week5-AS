@@ -5,14 +5,24 @@
   --lightbluegreen: #249f9c;
   --deepbluegreen: #037a76;
 }
-
+#root {
+  margin-top: 0;
+}
+@font-face {
+  font-family: "GameOfSquids";
+  src: local("GameOfSquids");
+  src: url("/fonts/GameOfSquids-1GMVL.woff"), format("woff");
+  /* url("./fonts/GameOfSquids-1GMVL.ttf"), format("truetype"); */
+}
 header {
   background-color: var(--boldpink);
-  font-family: GameOfSquids;
+  color: var(--white);
 }
 h1 {
+  font-size: 4rem;
   text-align: center;
-  padding: 60pt;
+  padding-top: 10pt;
+  margin-top: 0;
 }
 
 body {
@@ -26,20 +36,38 @@ body {
   margin-left: 0;
   margin-right: 0;
   background-color: var(--white);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Space Grotesk", "GameOfSquids", "Gill Sans", "Gill Sans MT",
+    Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
+input,
+button {
+  margin-left: 5pt;
+}
 form {
   background-color: var(--pastelpink);
   text-align: left;
   padding: 5pt;
   font-size: 1.2rem;
 }
+
 input {
-  margin-left: 5pt;
+  font-family: "Space Grotesk";
+}
+button {
+  height: 50pt;
+  width: 50pt;
+  border-radius: 50%;
+  font-family: "Space Grotesk";
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 3pt solid var(--lightbluegreen);
+}
+button:active {
+  background-color: green;
 }
 /* game components */
 .word {
@@ -81,13 +109,18 @@ input {
 .testwrap {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--white);
 }
 .player-container {
-  background-color: var(--deepbluegreen);
-  width: 150px;
+  max-width: 150px;
+}
+img {
+  border: 7pt solid var(--lightbluegreen);
+  border-radius: 50%;
 }
 .game-container {
-  background-color: var(--deepbluegreen);
+  flex-grow: 2;
 }
 .figure-container {
   background-color: var(--white);

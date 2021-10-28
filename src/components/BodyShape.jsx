@@ -1,9 +1,8 @@
 import React from "react";
 
-const BodyShape = (props) => {
+const BodyShape = ({ profileData }) => {
   return (
     <svg height="250" width="200" className="figure-container">
-      <img height="250" width="250" src={props.avatar} />
       {/* <!-- Rod --> */}
       <line x1="60" y1="20" x2="140" y2="20" />
       <line x1="140" y1="20" x2="140" y2="50" />
@@ -12,6 +11,14 @@ const BodyShape = (props) => {
 
       {/* <!-- Head --> */}
       <circle cx="140" cy="70" r="20" />
+      <img
+        className="img-circle"
+        src={profileData.avatar_url}
+        x="140"
+        y="70"
+        height="50pt"
+        width="50pt"
+      />
       {/* <!-- Body --> */}
       <line x1="140" y1="90" x2="140" y2="150" />
       {/* <!-- Arms --> */}
