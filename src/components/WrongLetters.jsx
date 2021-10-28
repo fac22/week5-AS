@@ -4,7 +4,7 @@ const WrongLetters = ({ wrongLetters }) => {
   return (
     <div className="wrong-letters-container">
       <div>
-        {wrongLetters.length > 0 && <p>Ops: Wrong</p>}
+        {wrongLetters.length > 0 && <p>Incorrect letter!</p>}
         {wrongLetters
           .map((letter, index) => <span key={index}>{letter}</span>)
           //reduce is going to add a comma in between every span
