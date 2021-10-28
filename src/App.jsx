@@ -79,6 +79,7 @@ function App() {
         wrongLetters={wrongLetters}
         randomWord={randomWord}
         renderNotification={renderNotification}
+        setPlayable={setPlayable}
       />
     </main>
   );

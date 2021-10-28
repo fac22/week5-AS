@@ -16,6 +16,7 @@ function GameComponents({
   wrongLetters,
   randomWord,
   renderNotification,
+  setPlayable,
 }) {
   if (!name) return <div>Loading...</div>;
   return (
@@ -26,16 +27,18 @@ function GameComponents({
         startGame={startGame}
         profileData={profileData}
       />
-      <BodyShape
-          avatar={profileData.avatar_url}
-          wrongLetters={wrongLetters}
-        />
-      
-        <div className="game-container">
-          <WrongLetters wrongLetters={wrongLetters} />
-          <Word randomWord={randomWord} correctLetters={correctLetters} />
-        </div>
-      <Popup />
+      <BodyShape avatar={profileData.avatar_url} wrongLetters={wrongLetters} />
+
+      <div className="game-container">
+        <WrongLetters wrongLetters={wrongLetters} />
+        <Word randomWord={randomWord} correctLetters={correctLetters} />
+      </div>
+      <Popup
+        correctLetters={correctLetters}
+        wrongLetters={wrongLetters}
+        randomWord={randomWord}
+        setPlayable={setPlayable}
+      />
       <Notification renderNotification={renderNotification} />
     </div>
   );
