@@ -4,6 +4,8 @@ import BodyShape from "./BodyShape";
 import WrongLetters from "./WrongLetters";
 import Word from "./Word";
 import Fetch from "./Fetch";
+import Popup from "./Popup";
+import Notification from "./Notification";
 
 function GameComponents({
   name,
@@ -13,6 +15,7 @@ function GameComponents({
   correctLetters,
   wrongLetters,
   randomWord,
+  renderNotification,
 }) {
   if (!name) return <div>Loading...</div>;
   return (
@@ -23,13 +26,17 @@ function GameComponents({
         startGame={startGame}
         profileData={profileData}
       />
-      <BodyShape profileData={profileData} />
-      <div>
+      <BodyShape
+          avatar={profileData.avatar_url}
+          wrongLetters={wrongLetters}
+        />
+      
         <div className="game-container">
           <WrongLetters wrongLetters={wrongLetters} />
           <Word randomWord={randomWord} correctLetters={correctLetters} />
         </div>
-      </div>
+      <Popup />
+      <Notification renderNotification={renderNotification} />
     </div>
   );
 }

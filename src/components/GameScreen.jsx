@@ -9,6 +9,7 @@ const GameScreen = ({
   correctLetters,
   wrongLetters,
   randomWord,
+  renderNotification,
 }) => {
   return (
     <>
@@ -21,6 +22,7 @@ const GameScreen = ({
           correctLetters={correctLetters}
           wrongLetters={wrongLetters}
           randomWord={randomWord}
+          renderNotification={renderNotification}
         />
       ) : null}
     </>
