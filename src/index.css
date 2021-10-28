@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "GameOfSquids";
+  src: local("GameOfSquids");
+  src: url("./fonts/GameOfSquids-1GMVL.woff"), format("woff"),
+    url("./fonts/GameOfSquids-1GMVL.ttf"), format("truetype");
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}

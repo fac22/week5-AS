@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+// import squidwoff from "./fonts/GameOfSquids-1GMVL.woff";
+// import squidttf from "./fonts/GameOfSquids-1GMVL.ttf";
 
 ReactDOM.render(
   <React.StrictMode>

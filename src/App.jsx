@@ -8,7 +8,6 @@ import "./App.css";
 function App() {
   const [username, setUserName] = React.useState(null);
   const [startGame, setStartGame] = React.useState(false);
-  const [data, setData] = React.useState(null);
   const [profileData, setProfileData] = React.useState(null);
 
   return (

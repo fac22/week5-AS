@@ -2,10 +2,14 @@ import React from "react";
 
 const Header = () => {
   return (
-    <>
-      <h1>Are You Ready For The 'Squid Game'?</h1>
-      <p>Find the word. Enter a letter</p>
-    </>
+    <header>
+      <h1>Play a game</h1>
+      <div className="wrapper">
+        <div id="square"></div>
+        <div id="triangle"></div>
+        <div id="circle"></div>
+      </div>
+    </header>
   );
 };
 
