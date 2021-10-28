@@ -6,7 +6,42 @@ import gameOfSquids from "./fonts/GameOfSquids-1GMVL.woff";
 import "./App.css";
 
 // preselected words
-const words = ["baby", "javascript", "programming", "house", "game", "laptop"];
+const words = [
+  "baby",
+  "javascript",
+  "programming",
+  "house",
+  "game",
+  "laptop",
+  "zombie",
+  "joking",
+  "pizza",
+  "hotdog",
+  "react",
+  "design",
+  "food",
+  "burger",
+  "king",
+  "administration",
+  "agreement",
+  "blood",
+  "business",
+  "building",
+  "community",
+  "challenge",
+  "customer",
+  "evidence",
+  "family",
+  "finger",
+  "future",
+  "human",
+  "information",
+  "relationship",
+  "school",
+  "somebody",
+  "voice",
+  "window",
+];
 // selecting a random word
 let randomWord = words[Math.floor(Math.random() * words.length)];
 
