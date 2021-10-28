@@ -11,6 +11,9 @@ function Fetch({ name, setProfileData, profileData, startGame }) {
       });
   }, [startGame, name]);
 
+  if (profileData.message === "Not Found")
+    return <div>Wrong username! Try again!</div>;
+
   return (
     <div className="player-container">
       <h2>Hello Player {Math.floor(Math.random() * 457)} </h2>
