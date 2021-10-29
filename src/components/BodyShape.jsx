@@ -1,6 +1,6 @@
 import React from "react";
 
-const BodyShape = ({ wrongLetters, avatar }) => {
+const BodyShape = ({ wrongLetters }) => {
   //how many wrong letters do we have
   const errors = wrongLetters.length;
   return (

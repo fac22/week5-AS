@@ -20,7 +20,6 @@ function GameComponents({
   setPlayable,
   playAgain,
 }) {
-  console.log(profileData);
   if (!name) return <div>Loading...</div>;
   return (
     <div className="testwrap">
