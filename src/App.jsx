@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
 import SearchUser from "./components/SearchUser";
-// import GameScreen from "./components/GameScreen";
 import GameComponents from "./components/GameComponents";
 import "./App.css";
 
