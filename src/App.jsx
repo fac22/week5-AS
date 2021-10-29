@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import SearchUser from "./components/SearchUser";
-import GameScreen from "./components/GameScreen";
+import GameComponents from "./components/GameComponents";
 import "./App.css";
 
 // preselected words
@@ -116,20 +116,21 @@ function App() {
         setStartGame={setStartGame}
         playAgain={playAgain}
       />
-      <GameScreen
-        name={username}
-        profileData={profileData}
-        setProfileData={setProfileData}
-        startGame={startGame}
-        setStartGame={setStartGame}
-        correctLetters={correctLetters}
-        wrongLetters={wrongLetters}
-        randomWord={randomWord}
-        randomNumber={randomNumber}
-        renderNotification={renderNotification}
-        setPlayable={setPlayable}
-        playAgain={playAgain}
-      />
+      {!startGame ? null : (
+        <GameComponents
+          name={username}
+          profileData={profileData}
+          setProfileData={setProfileData}
+          startGame={startGame}
+          correctLetters={correctLetters}
+          wrongLetters={wrongLetters}
+          randomWord={randomWord}
+          randomNumber={randomNumber}
+          renderNotification={renderNotification}
+          setPlayable={setPlayable}
+          playAgain={playAgain}
+        />
+      )}
     </main>
   );
 }
