@@ -6,9 +6,7 @@ function Fetch({ name, setProfileData, profileData, startGame, randomNumber }) {
   React.useEffect(() => {
     fetch(USER_URL + name)
       .then((res) => res.json())
-      .then((data) => {
-        setProfileData(data);
-      });
+      .then((data) => setProfileData(data));
   }, [startGame, name]);
 
   if (profileData.message === "Not Found")
